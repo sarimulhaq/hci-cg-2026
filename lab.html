@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab Practice — HTML Foundations</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #222222;
+        font-size: 16px;
+      }
+
+      header,
+      footer {
+        background-color: #eeeeee;
+        color: #000000;
+      }
+
+      nav a {
+        color: #003366;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Lab Practice — HTML Foundations</h1>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hci-lectures.html">HCI Lectures</a></li>
+          <li>
+            <a href="interaction-models.html" aria-current="page"
+              >HCI Interaction Models</a
+            >
+          </li>
+          <li><a href="lab.html">Lab Practice</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Part A: Identify Mistakes & Correct HTML</h2>
+        <p>
+          For each example: describe the issue briefly and show the corrected
+          HTML.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Issue</th>
+              <th>Incorrect HTML</th>
+              <th>Corrected HTML</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Navigation links not inside &lt;li&gt;</td>
+              <td>
+                <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;li&gt;&lt;a href="models.html"&gt;Models&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+              </td>
+              <td>
+                <pre><code>&lt;nav aria-label="Main Navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="models.html"&gt;Models&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Multiple aria-current="page"</td>
+              <td>
+                <pre><code>&lt;li&gt;&lt;a href="index.html" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="lab.html" aria-current="page"&gt;Practice&lt;/a&gt;&lt;/li&gt;</code></pre>
+              </td>
+              <td>
+                <pre><code>&lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="lab.html" aria-current="page"&gt;Practice&lt;/a&gt;&lt;/li&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Label not linked to control</td>
+              <td>
+                <pre><code>&lt;label for="msg"&gt;Message&lt;/label&gt;
+&lt;textarea id="message"&gt;&lt;/textarea&gt;</code></pre>
+              </td>
+              <td>
+                <pre><code>&lt;label for="message"&gt;Message&lt;/label&gt;
+&lt;textarea id="message"&gt;&lt;/textarea&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Heading skips a level</td>
+              <td>
+                <pre><code>&lt;h1&gt;Interaction Analysis&lt;/h1&gt;
+&lt;h3&gt;Norman vs GOMS&lt;/h3&gt;</code></pre>
+              </td>
+              <td>
+                <pre><code>&lt;h1&gt;Interaction Analysis&lt;/h1&gt;
+&lt;h2&gt;Norman vs GOMS&lt;/h2&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Table missing caption + headers</td>
+              <td>
+                <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;Model&lt;/td&gt;&lt;td&gt;Predicts&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;KLM&lt;/td&gt;&lt;td&gt;Time&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </td>
+              <td>
+                <pre><code>&lt;table&gt;
+  &lt;caption&gt;HCI Models&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Model&lt;/th&gt;&lt;th&gt;Predicts&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;th&gt;KLM&lt;/th&gt;&lt;td&gt;Execution time&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Part B: True / False</h2>
+
+        <ul>
+          <li>
+            Every link in a &lt;ul&gt; must be wrapped in &lt;li&gt;. True
+          </li>
+          <li>
+            A page may have multiple &lt;h1&gt; headings to enlarge text. False
+          </li>
+          <li>aria-current="page" should only be on the active link. True</li>
+          <li>A form is accessible without &lt;label&gt; elements. False</li>
+          <li>
+            KLM predicts execution time for expert, error-free tasks. True
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Part C: Short Answer</h2>
+
+        <p>
+          <strong>Semantic vs Generic Elements:</strong> Semantic elements (like
+          &lt;nav&gt;, &lt;header&gt;) carry meaning and help accessibility.
+          Generic elements (like &lt;div&gt;) only provide structure.
+        </p>
+
+        <p>
+          <strong>Why KLM ignores high-level planning:</strong> KLM predicts
+          only low-level action times (keystrokes, pointing, mental prep). It
+          does not include interpretation, learning, or decision-making.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© CS-555 HCI — Lab Practice — Sarim Ul Haq & Khubaib Ahmed</p>
+    </footer>
+  </body>
+</html>

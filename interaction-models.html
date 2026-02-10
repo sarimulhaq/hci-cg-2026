@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Norman, GOMS & KLM — Interaction Models</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #222222;
+        font-size: 16px;
+      }
+
+      header,
+      footer {
+        background-color: #eeeeee;
+        color: #000000;
+      }
+
+      nav a {
+        color: #003366;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Interaction Models in HCI</h1>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hci-lectures.html">HCI Lectures</a></li>
+          <li>
+            <a href="interaction-models.html" aria-current="page"
+              >HCI Interaction Models</a
+            >
+          </li>
+          <li><a href="lab.html">Lab Practice</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Norman’s Action Cycle</h2>
+        <article>
+          <p>
+            Norman’s Action Cycle explains how users interact with systems step
+            by step: forming a goal, planning an action, executing it, and
+            evaluating the result (Dix et al., Ch. 9, p. 437).
+          </p>
+          <p>
+            Key challenges are the <strong>gulf of execution</strong>—difficulty
+            translating intention into action—and the
+            <strong>gulf of evaluation</strong>—difficulty understanding
+            feedback. Effective interfaces reduce both gaps.
+          </p>
+          <p>
+            This model highlights user cognition and feedback, helping designers
+            spot usability problems.
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <h2>GOMS Model</h2>
+        <article>
+          <p>
+            GOMS stands for Goals, Operators, Methods, and Selection rules. It
+            is a structured way to describe how expert users perform tasks (Dix
+            et al., Ch. 12, p. 437).
+          </p>
+          <p>
+            <strong>Goals</strong> are what users want to achieve.
+            <strong>Operators</strong> are basic actions like clicks or
+            keystrokes. <strong>Methods</strong> are sequences of operators to
+            achieve goals. <strong>Selection rules</strong> determine which
+            method to use in a situation.
+          </p>
+          <p>
+            GOMS helps break down complex tasks into predictable steps, making
+            it easier to analyze efficiency.
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Keystroke-Level Model (KLM)</h2>
+        <article>
+          <p>
+            KLM is a detailed extension of GOMS that predicts how long an expert
+            user takes to perform a task without errors (Dix et al., Ch. 12, p.
+            437).
+          </p>
+          <p>
+            Tasks are divided into low-level operators: keystrokes, pointing,
+            mental preparation, and system response time. Summing these gives
+            the predicted execution time.
+          </p>
+          <p>
+            KLM focuses solely on efficiency, not decision-making or
+            interpretation.
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Model Comparison</h2>
+
+        <table>
+          <caption>
+            Norman vs GOMS vs KLM
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Model</th>
+              <th scope="col">Focus</th>
+              <th scope="col">Design Insight</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Norman</th>
+              <td>User thinking and feedback</td>
+              <td>Reduces execution and evaluation gaps</td>
+            </tr>
+            <tr>
+              <th scope="row">GOMS</th>
+              <td>Task structure and efficiency</td>
+              <td>Breaks tasks into predictable steps</td>
+            </tr>
+            <tr>
+              <th scope="row">KLM</th>
+              <td>Execution time prediction</td>
+              <td>Estimates expert user performance speed</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          Together, these models provide complementary perspectives: Norman
+          explains user thinking, GOMS structures tasks, and KLM predicts
+          performance timing.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© CS-555 HCI — Interaction Models — Sarim Ul Haq & Khubaib Ahmed</p>
+    </footer>
+  </body>
+</html>
